@@ -1,114 +1,16 @@
-# MyBank - Full Stack Banking Application
+# React + Vite
 
-A professional full-stack banking web application built using the MERN stack.  
-This project simulates real-world banking features like transactions, KYC verification, loans, and chatbot support.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
--  User Authentication (JWT + bcrypt)
--  Deposit & Withdraw Money
--  Transfer Between Accounts
--  Transaction History
--  KYC Verification (PAN & Aadhaar)
--  Loan Application System
--  Notifications System
--  Banking Chatbot (50+ queries)
--  Graphs (Bar Chart for transactions)
-- Premium UI with Bootstrap & FontAwesome
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Tech Stack
+## Expanding the ESLint configuration
 
-### Frontend
-- React (Vite)
-- Axios
-- Bootstrap
-- FontAwesome
-- Chart.js
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
-- JWT (Authentication)
-- bcryptjs (Security)
-- CORS
-
-
-##  API Endpoints
-
-### Auth
-- POST /api/auth/register
-- POST /api/auth/login
-
-### Account
-- POST /api/account/deposit
-- POST /api/account/withdraw
-- POST /api/account/kyc
-
-### Transactions
-- POST /api/transactions/transfer
-- GET /api/transactions
-
-### Loans
-- POST /api/loans/apply
-- GET /api/loans
-
-### Notifications
-- GET /api/notifications
-
-
-
-## Authentication
-
-- Passwords are encrypted using bcrypt
-- JWT is used for secure authentication
-- Token-based access for protected routes
-
-
-
-##  Graphs
-
-- Bar chart representation of:
-  - Deposits (Green)
-  - Withdrawals (Red)
-  - Transfers (Yellow)
-
-
-
-##  Chatbot
-
-- Rule-based chatbot
-- Supports 50+ banking-related queries
-- Provides instant user assistance
-
-
-
-##  Challenges Faced
-
-- Handling JWT authentication
-- Fixing API errors (404, 500)
-- Managing frontend-backend integration
-- Debugging transaction updates
-- Designing professional UI
-
-
-## Future Enhancements
-
-- AI-based chatbot
-- UPI integration
-- Email/SMS notifications
-- Mobile application
-- Advanced security features
-
-
-
-##  Conclusion
-
-This project demonstrates real-world banking functionalities with a modern UI and secure backend, making it suitable for learning and showcasing full-stack development skills.
----
-
-## 📂 Project Structure
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

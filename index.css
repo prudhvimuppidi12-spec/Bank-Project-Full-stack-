@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fa;
+}
+
+/* Navbar */
+.navbar-custom {
+  background: #0d1b2a;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100vh;
+  width: 220px;
+  position: fixed;
+  background: #0d1b2a;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ccc;
+  padding: 12px;
+  margin: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: #415a77;
+  color: white;
+}
+
+/* Main */
+.main {
+  margin-left: 240px;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+/* Cards */
+.card {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}

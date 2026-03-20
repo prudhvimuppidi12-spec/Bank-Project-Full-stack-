@@ -1,0 +1,32 @@
+const router = require("express").Router();
+const User = require("../models/User");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+
+router.post("/register", async(req,res)=>{
+  const {name,email,password,pan,aadhaar} = req.body;
+
+  const hash = await bcrypt.hash(password,10);
+
+  const user = await User.create({
+    name,email,password:hash,pan,aadhaar
+  });
+
+  res.json(user);
+});
+
+router.post("/login", async(req,res)=>{
+  const {email,password} = req.body;
+
+  const user = await User.findOne({email});
+  if(!user) return res.status(400).json("User not found");
+
+  const match = await bcrypt.compare(password,user.password);
+  if(!match) return res.status(400).json("Wrong password");
+
+  const token = jwt.sign({id:user._id},"banksecret");
+
+  res.json({user,token});
+});
+
+module.exports = router;
